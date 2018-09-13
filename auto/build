@@ -1,0 +1,16 @@
+#! /bin/bash -e
+#
+#
+# Build the image
+
+display_status() {
+    echo ">>> $1 <<<" 1>&2
+}
+
+DOCKER_IMAGE=buildkite-demo-image
+
+docker build -t ${DOCKER_IMAGE} ./
+
+docker tag ${DOCKER_IMAGE} ${DOCKER_IMAGE}:latest
+
+display_status ">>> Created docker image ${DOCKER_IMAGE} with tag latest <<<"

@@ -1,0 +1,13 @@
+steps:
+
+  - command: "./auto/build"
+    label: "Build"
+
+  - block: "Release"
+    branches: "master"
+
+  - command: "./auto/release"
+    label: "Release"
+    env:
+      ENV: prod
+    branches: "master"
