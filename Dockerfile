@@ -2,7 +2,6 @@ FROM openjdk:8-jdk-alpine
 MAINTAINER "Gao Shuai" <gaoshuai1205@gmail.com>
 
 ENV APP_DIR  /app/
-ENV LIB_DIR $APP_DIR/lib/
 
 RUN mkdir -p $APP_DIR
 
